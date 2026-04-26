@@ -4,7 +4,7 @@
 
 ---
 
-## Objetivo de esta sesión
+## Objetivos
 
 - Entender qué es NestJS y cómo se diferencia de Express
 - Conocer los bloques principales: Módulos, Controladores, Servicios

@@ -2,8 +2,6 @@
 
 API REST de gestión de productos construida con **NestJS**, **TypeORM** y **MySQL**.
 
-API REST con arquitectura moderna y opinionada en TypeScript.
-
 ---
 
 ## Cómo usar este repositorio

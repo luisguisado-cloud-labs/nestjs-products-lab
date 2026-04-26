@@ -6,7 +6,7 @@
 
 ---
 
-## Objetivo de esta sesión
+## Objetivos
 
 - Generar el módulo `Products` con el CLI de NestJS
 - Entender cómo el CLI actualiza automáticamente los módulos
