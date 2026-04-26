@@ -2,13 +2,13 @@
 
 API REST de gestión de productos construida con **NestJS**, **TypeORM** y **MySQL**.
 
-Proyecto de clase sobre arquitecturas backend modernas y opinionadas con TypeScript.
+API REST con arquitectura moderna y opinionada en TypeScript.
 
 ---
 
 ## Cómo usar este repositorio
 
-Seguí los laboratorios en orden. Cada uno parte del estado que dejó el anterior.
+Sigue los laboratorios en orden. Cada uno parte del estado que dejó el anterior.
 
 👉 **[Ver índice general de laboratorios →](./docs/INDEX.md)**
 
@@ -16,7 +16,7 @@ Seguí los laboratorios en orden. Cada uno parte del estado que dejó el anterio
 
 ## Contexto: arquitectura de microservicios
 
-Este proyecto es uno de los servicios de un ecommerce que iremos construyendo clase a clase:
+Este proyecto es uno de los servicios de un ecommerce con arquitectura de microservicios:
 
 ```
 ecommerce/
