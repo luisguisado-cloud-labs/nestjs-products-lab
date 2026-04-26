@@ -18,19 +18,19 @@
 
 ### NestJS vs Express
 
-En el proyecto anterior (express-rest-lab) usamos Express: una librería minimalista donde **vos decidís** cómo organizar el código. NestJS es un framework **opinionado**: ya viene con una estructura definida que debés respetar.
+En el proyecto anterior (express-rest-lab) usamos Express: una librería minimalista donde **tú decides** cómo organizar el código. NestJS es un framework **opinionado**: ya viene con una estructura definida que debes respetar.
 
 | | Express | NestJS |
 |---|---|---|
 | Tipo | Librería | Framework |
-| Estructura | La definís vos | La impone el framework |
+| Estructura | La defines tú | La impone el framework |
 | Lenguaje | JS (TS opcional) | TypeScript nativo |
 | Organización | Sin convención fija | Módulos + DI obligatorio |
 | Inspirado en | Node.js puro | Angular (frontend) |
 | Curva de aprendizaje | Baja | Media |
 
 **¿Cuándo usar cada uno?**
-Express es ideal para proyectos pequeños o cuando querés control total. NestJS brilla en proyectos grandes y equipos: la estructura fija hace que el código de un desarrollador sea fácil de leer por otro.
+Express es ideal para proyectos pequeños o cuando quieres control total. NestJS brilla en proyectos grandes y equipos: la estructura fija hace que el código de un desarrollador sea fácil de leer por otro.
 
 ---
 
@@ -93,18 +93,20 @@ En NestJS, los servicios no se instancian manualmente. Declarás lo que necesit�
 const service = new ProductsService();
 service.findAll();
 
-// ✅ Con DI — NestJS lo instancia por vos
+// ✅ Con DI — NestJS lo instancia por ti
 constructor(private readonly productsService: ProductsService) {}
 // Podés llamar this.productsService.findAll() directamente
 ```
 
-Ventaja clave: en tests podés inyectar una versión falsa del servicio sin cambiar el controlador.
+Ventaja clave: en tests puedes inyectar una versión falsa del servicio sin cambiar el controlador.
 
 ---
 
 ## Prerrequisitos
 
-- Node.js ≥ 18 instalado: `node -v`
+> Las versiones indicadas son referenciales. Verifica siempre las versiones LTS activas en [nodejs.org](https://nodejs.org) y [npmjs.com](https://www.npmjs.com) antes de comenzar.
+
+- Node.js 22.x LTS instalado: `node -v`
 - Docker instalado: `docker -v`
 - NestJS CLI instalado globalmente:
 
@@ -116,7 +118,7 @@ Verificá que quedó instalado:
 
 ```bash
 nest -v
-# → 10.x.x
+# → 11.x.x
 ```
 
 ---
@@ -129,7 +131,7 @@ nest -v
 nest new nestjs-products-lab
 ```
 
-El CLI va a preguntar qué gestor de paquetes querés usar. Elegí **npm**:
+El CLI preguntará qué gestor de paquetes quieres usar. Elige **npm**:
 
 ```
 ? Which package manager would you ❤️ to use? npm
@@ -261,7 +263,7 @@ export class AppService {
 
 Toda API REST real usa un prefijo como `/api` para separar el tráfico de la API del resto (archivos estáticos, etc.).
 
-En `src/main.ts`, agregá `app.setGlobalPrefix('api')` y un log de arranque:
+En `src/main.ts`, agrega `app.setGlobalPrefix('api')` y un log de arranque:
 
 ```typescript
 // src/main.ts — MODIFICADO
@@ -278,13 +280,13 @@ async function bootstrap() {
 }
 ```
 
-Guardá y verificá que el servidor no da errores. El endpoint anterior (`GET /`) ahora está en `GET /api`.
+Guarda y verifica que el servidor no da errores. El endpoint anterior (`GET /`) ahora está en `GET /api`.
 
 ### 3.2 Endpoint GET /api/health
 
 El endpoint de health check es una convención: permite saber si el servicio está vivo sin hacer consultas a la base de datos.
 
-En `src/app.service.ts`, reemplazá `getHello` por `getHealth`:
+En `src/app.service.ts`, reemplaza `getHello` por `getHealth`:
 
 ```typescript
 // src/app.service.ts — MODIFICADO

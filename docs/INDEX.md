@@ -18,23 +18,25 @@ Una API REST para gestión de productos con los siguientes endpoints:
 
 ## Stack tecnológico
 
-| Herramienta | Versión | Rol |
+> **Nota:** Las versiones indicadas son referenciales y corresponden a las estables al momento de redactar estos laboratorios. Pueden variar según la fecha en que sigas el lab. Antes de comenzar, verifica las versiones LTS/estables más recientes en [nodejs.org](https://nodejs.org) y [npmjs.com](https://www.npmjs.com).
+
+| Herramienta | Versión referencial | Rol |
 |---|---|---|
-| **Node.js** | ≥ 18 | Runtime |
-| **NestJS** | 10.x | Framework backend |
-| **TypeScript** | 5.x | Lenguaje |
+| **Node.js** | 22.x LTS | Runtime |
+| **NestJS** | 11.x | Framework backend |
+| **TypeScript** | 5.5+ | Lenguaje |
 | **TypeORM** | 0.3.x | ORM |
-| **MySQL** | 8.0 | Base de datos |
-| **Docker / Docker Compose** | - | Contenedor de la DB |
-| **class-validator** | - | Validación de DTOs |
-| **class-transformer** | - | Transformación de datos |
+| **MySQL** | 8.4 LTS | Base de datos |
+| **Docker / Docker Compose** | 27.x | Contenedor de la DB |
+| **class-validator** | 0.14.x | Validación de DTOs |
+| **class-transformer** | 0.5.x | Transformación de datos |
 | **@nestjs/config** | - | Variables de entorno |
 
 ---
 
 ## Prerrequisitos globales
 
-- Node.js ≥ 18 instalado
+- Node.js 22.x LTS instalado
 - Docker y Docker Compose instalados
 - NestJS CLI instalado: `npm i -g @nestjs/cli`
 - Postman, Thunder Client o `curl` para probar endpoints

@@ -26,7 +26,7 @@ Lo mismo que hicimos en express-rest-lab: primero entendemos el flujo HTTP → C
 
 ### El CLI de NestJS como generador
 
-El CLI puede generar archivos por vos y además **actualizar automáticamente** los archivos relacionados:
+El CLI puede generar archivos por ti y además **actualizar automáticamente** los archivos relacionados:
 
 ```bash
 nest g module products    # genera products.module.ts + actualiza app.module.ts
@@ -73,7 +73,7 @@ nest g controller products --no-spec
 nest g service products --no-spec
 ```
 
-Observá la salida del CLI — verás que cada comando además de crear el archivo nuevo, actualiza un archivo existente:
+Observa la salida del CLI — verás que cada comando además de crear el archivo nuevo, actualiza un archivo existente:
 
 ```
 CREATE src/products/products.module.ts
